@@ -1,3 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-lilac: #e6e6ff;
+    --color-accent: #193cb8;
+    --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+    @apply bg-lilac dark:bg-black w-[100vw] min-h-[100vh] overflow-x-hidden font-montserrat;
+}
+
+.container {
+    @apply px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64;
+}
+
+.flex-between {
+    @apply flex justify-between items-center;
+}
+.flex-center {
+    @apply flex justify-center items-center;
+}
+.flex-gap-2 {
+    @apply flex items-center gap-2;
+}
+
+.flex-gap-4 {
+    @apply flex items-center gap-4;
+}
+
+.primary-text {
+    @apply font-bold font-montserrat text-2xl md:5xl lg:6xl tracking-[6%] leading-[142%] text-black dark:text-white;
+}
+
+.secondary-text {
+    @apply font-normal font-montserrat text-md md:text-xl tracking-[6%] leading-[142%] text-black dark:text-white;
+}
+
+.btn {
+    @apply font-medium font-sans text-base rounded-full px-4 py-2;
+}
+.btn-primary {
+    @apply bg-accent text-white;
+}
+.button-secondary {
+    @apply bg-transparent  text-black dark:text-white;
+}
